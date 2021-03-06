@@ -39,6 +39,9 @@ pytest-cov = "^2.11.1"
 pytest-icdiff = "^0.5"
 respx = "^0.16.3"
 
+[tool.isort]
+profile = "black"
+multi_line_output = 3
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
