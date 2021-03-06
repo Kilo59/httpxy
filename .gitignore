@@ -130,3 +130,9 @@ dmypy.json
 
 # VS Code
 .vscode/
+
+# misc
+setup.py
+example.yaml
+*.ipynb
+.DS_Store

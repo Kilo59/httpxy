@@ -5,6 +5,10 @@ Collection of test data.
 """
 from yaml import YAMLObject
 
+CONTENT_TYPE = "Content-Type"
+ACCEPT = "Accept"
+YAML_TYPE = "application/yaml"
+
 SIMPLE_LIST = """
 - Hesperiidae
 - Papilionidae

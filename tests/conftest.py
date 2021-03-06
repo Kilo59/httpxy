@@ -11,7 +11,9 @@ import pytest
 import respx
 from pprintpp import pformat as pf
 
-from httpy import ACCEPT, CONTENT_TYPE, YAML_TYPE, _dump_yaml, safe_load
+from httpy import _dump_yaml, safe_load
+
+from .data import ACCEPT, CONTENT_TYPE, YAML_TYPE
 
 LOGGER = logging.getLogger("tests")
 

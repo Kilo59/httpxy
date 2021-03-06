@@ -6,9 +6,8 @@ import pytest
 from pprintpp import pformat as pf
 
 import httpy
-from httpy import CONTENT_TYPE, YAML_TYPE
 
-from .data import ANY_TYPE, SIMPLE_DICT, SIMPLE_LIST
+from .data import ANY_TYPE, CONTENT_TYPE, SIMPLE_DICT, SIMPLE_LIST, YAML_TYPE
 
 
 @pytest.mark.parametrize(
