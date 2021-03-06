@@ -6,7 +6,7 @@ import pytest
 
 import httpy
 
-from .data import ANY_TYPE, PY_OBJECT, SIMPLE_DICT, SIMPLE_LIST, Hero
+from .data import ANY_TYPE, SIMPLE_DICT, SIMPLE_LIST
 
 
 @pytest.mark.parametrize(

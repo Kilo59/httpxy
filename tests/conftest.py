@@ -11,7 +11,7 @@ import pytest
 import respx
 from pprintpp import pformat as pf
 
-from httpy import ACCEPT, CONTENT_TYPE, YAML_TYPE, dump_yaml, safe_load
+from httpy import ACCEPT, CONTENT_TYPE, YAML_TYPE, _dump_yaml, safe_load
 
 LOGGER = logging.getLogger("tests")
 
@@ -25,7 +25,7 @@ def yaml_content_se(request: httpx.Request, **kwargs) -> httpx.Response:
     if content_type == YAML_TYPE:
         yaml_data = safe_load(request.content)
         LOGGER.info(f"yaml: {pf(yaml_data, depth=2)}")
-        return httpx.Response(200, content=dump_yaml({"accepted": yaml_data}).encode())
+        return httpx.Response(200, content=_dump_yaml({"accepted": yaml_data}).encode())
 
     return httpx.Response(400, text="Not YAML")
 

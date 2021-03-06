@@ -4,16 +4,15 @@ httpy
 httpx with native yaml support.
 """
 
-from typing import Any, Dict, Union
+from typing import Any, Dict, List, Union
 
 from httpx import *
-from yaml import dump, load, safe_load
+from yaml import dump, safe_load
 
 try:
     from yaml import CDumper as Dumper
-    from yaml import CLoader as Loader
 except ImportError:
-    from yaml import Dumper, Loader
+    from yaml import Dumper
 
 CONTENT_TYPE = "Content-Type"
 ACCEPT = "Accept"
@@ -25,11 +24,17 @@ def _yaml(self, **load_kwargs: Any) -> Any:
     return safe_load(self.content, **load_kwargs)
 
 
-def dump_yaml(content: bytes) -> str:
+def _dump_yaml(content: Union[bytes, Dict, List]) -> str:
     return dump(content, Dumper=Dumper)
 
 
 setattr(Response, "yaml", _yaml)
+
+
+# TODO: client.request() -> logic goes here
+# TODO: request() - yaml kw
+# TODO: post(), put(), patch() - yaml kw
+# TODO: stream? probably not
 
 if __name__ == "__main__":
     pass
