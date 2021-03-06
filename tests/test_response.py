@@ -3,8 +3,9 @@ tests.test_response.py
 ~~~~~~~~~~~~~~~~~~~~~~
 """
 import pytest
-import httpy
 from yaml import YAMLObject
+
+import httpy
 
 SIMPLE_LIST = """
 - Hesperiidae

@@ -4,16 +4,16 @@ httpy
 httpx with native yaml support.
 """
 
+from typing import Any, Dict, Union
+
 from httpx import *
-
-from typing import Union, Dict, Any
-
-from yaml import load, dump, safe_load
+from yaml import dump, load, safe_load
 
 try:
-    from yaml import CLoader as Loader, CDumper as Dumper
+    from yaml import CDumper as Dumper
+    from yaml import CLoader as Loader
 except ImportError:
-    from yaml import Loader, Dumper
+    from yaml import Dumper, Loader
 
 
 def _yaml(self, **load_kwargs: Any) -> Any:
