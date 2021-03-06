@@ -6,7 +6,7 @@ httpx with native yaml support.
 
 from typing import Any, Dict, List, Union
 
-from httpx import *
+from httpx import *  # pylint: disable=unused-wildcard-import,wildcard-import
 from yaml import dump, safe_load
 
 try:
@@ -26,7 +26,7 @@ def _dump_yaml(content: Union[bytes, Dict, List]) -> str:
 
 setattr(Response, "yaml", _yaml)
 
-
+# pylint: disable=fixme
 # TODO: client.request() -> logic goes here
 # TODO: request() - yaml kw
 # TODO: post(), put(), patch() - yaml kw

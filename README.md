@@ -1,7 +1,7 @@
 # httpy
 HTTP client with yaml support
 
-Adds minor convenience features to [`httpx`](https://www.python-httpx.org/) which aims to make working with `yaml` easier and safer.
+Adds minor convenience features to the excellent [`httpx`](https://www.python-httpx.org/) library which aims to make working with `yaml` easier and safer.
 
 ## Installation
 
