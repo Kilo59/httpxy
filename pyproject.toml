@@ -1,8 +1,29 @@
 [tool.poetry]
 name = "httpy"
-version = "0.0.1"
-description = "HTTP client with native yaml support."
+version = "0.0.0a1"
+description = "HTTP client (httpx) with native yaml support."
 authors = ["Gabriel <gabriel59kg@gmail.com>"]
+repository = "https://github.com/Kilo59/httpy"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Topic :: Internet :: WWW/HTTP",
+    "Framework :: AsyncIO",
+    "Framework :: Trio",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3 :: Only",
+    ]
+
+[tool.poetry.extras]
+http2 = ["h2==3.*"]
+brotli = ["brotlipy==0.7.*"]
 
 [tool.poetry.dependencies]
 python = "^3.6.1"
