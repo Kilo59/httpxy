@@ -1,9 +1,10 @@
 [tool.poetry]
-name = "httpy"
+name = "httpxy"
 version = "0.0.0a1"
 description = "HTTP client (httpx) with native yaml support."
+readme = "README.md"
 authors = ["Gabriel <gabriel59kg@gmail.com>"]
-repository = "https://github.com/Kilo59/httpy"
+repository = "https://github.com/Kilo59/httpxy"
 classifiers = [
     "Development Status :: 1 - Planning",
     "Environment :: Web Environment",

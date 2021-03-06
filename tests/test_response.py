@@ -4,7 +4,7 @@ tests.test_response.py
 """
 import pytest
 
-import httpy
+import httpxy
 
 from .data import ANY_TYPE, SIMPLE_DICT, SIMPLE_LIST
 
@@ -39,7 +39,7 @@ from .data import ANY_TYPE, SIMPLE_DICT, SIMPLE_LIST
     ],
 )
 def test_yaml(content, expected):
-    r = httpy.Response(200, content=content)
+    r = httpxy.Response(200, content=content)
     assert expected == r.yaml()
 
 

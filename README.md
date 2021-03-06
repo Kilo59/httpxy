@@ -1,4 +1,9 @@
-# httpy
+[![PyPI version](https://badge.fury.io/py/blue-chip.svg)](https://badge.fury.io/py/httpxy)
+[![Coverage Status](https://coveralls.io/repos/github/Kilo59/httpxy/badge.svg?branch=master)](https://coveralls.io/github/Kilo59/httpxy?branch=master)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+
+
+# httpxy
 HTTP client with yaml support
 
 Adds minor convenience features to the excellent [`httpx`](https://www.python-httpx.org/) library which aims to make working with `yaml` easier and safer.
@@ -6,7 +11,7 @@ Adds minor convenience features to the excellent [`httpx`](https://www.python-ht
 ## Installation
 
 ```
-pip install httpy
+pip install httpxy
 ```
 
 ## Features
@@ -24,10 +29,10 @@ pip install httpy
 Equivalent to `response.json()`.
 
 ```python
-import httpy
+import httpxy
 from pprint import pprint
 
-response = httpy.get("https://mockbin.org/request", headers={"accept": "application/yaml"})
+response = httpxy.get("https://mockbin.org/request", headers={"accept": "application/yaml"})
 
 dict_from_yaml = response.yaml()
 

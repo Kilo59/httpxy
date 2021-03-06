@@ -5,7 +5,7 @@ tests.test_yaml_api.py
 import pytest
 from pprintpp import pformat as pf
 
-import httpy
+import httpxy
 
 from .data import ANY_TYPE, CONTENT_TYPE, SIMPLE_DICT, SIMPLE_LIST, YAML_TYPE
 
@@ -13,12 +13,12 @@ from .data import ANY_TYPE, CONTENT_TYPE, SIMPLE_DICT, SIMPLE_LIST, YAML_TYPE
 @pytest.mark.parametrize(
     "method, kwargs",
     [
-        (httpy.post, {"headers": {CONTENT_TYPE: YAML_TYPE}, "data": SIMPLE_LIST}),
-        (httpy.put, {"headers": {CONTENT_TYPE: YAML_TYPE}, "data": SIMPLE_DICT}),
-        (httpy.patch, {"headers": {CONTENT_TYPE: YAML_TYPE}, "data": ANY_TYPE}),
-        # (httpy.post, {"yaml": SIMPLE_LIST}),
-        # (httpy.put, {"yaml": SIMPLE_DICT}),
-        # (httpy.patch, {"yaml": ANY_TYPE}),
+        (httpxy.post, {"headers": {CONTENT_TYPE: YAML_TYPE}, "data": SIMPLE_LIST}),
+        (httpxy.put, {"headers": {CONTENT_TYPE: YAML_TYPE}, "data": SIMPLE_DICT}),
+        (httpxy.patch, {"headers": {CONTENT_TYPE: YAML_TYPE}, "data": ANY_TYPE}),
+        # (httpxy.post, {"yaml": SIMPLE_LIST}),
+        # (httpxy.put, {"yaml": SIMPLE_DICT}),
+        # (httpxy.patch, {"yaml": ANY_TYPE}),
     ],
 )
 def test_send_methods(base_url, method, kwargs):

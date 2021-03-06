@@ -1,5 +1,5 @@
 """
-httpy
+httpxy
 ~~~~~
 httpx with native yaml support.
 """

@@ -11,7 +11,7 @@ import pytest
 import respx
 from pprintpp import pformat as pf
 
-from httpy import _dump_yaml, safe_load
+from httpxy import _dump_yaml, safe_load
 
 from .data import ACCEPT, CONTENT_TYPE, YAML_TYPE
 
