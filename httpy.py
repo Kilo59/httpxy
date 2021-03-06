@@ -15,6 +15,10 @@ try:
 except ImportError:
     from yaml import Dumper, Loader
 
+CONTENT_TYPE = "Content-Type"
+ACCEPT = "Accept"
+YAML_TYPE = "application/yaml"
+
 
 def _yaml(self, **load_kwargs: Any) -> Any:
     """Deserialize the content using `PyYaml` `safe_load()`."""
