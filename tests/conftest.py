@@ -43,7 +43,6 @@ def yaml_accept_se(request: httpx.Request, **kwargs) -> httpx.Response:
 @contextlib.contextmanager
 def yaml_api_mocker(base_url=EXAMPLE_BASE_URL, **mock_kwargs) -> respx.MockRouter:
     with respx.mock(base_url=base_url, **mock_kwargs) as respx_mock:
-
         send_yaml = respx_mock.route(method__in=["PUT", "PATCH", "POST"])
         send_yaml.mock(side_effect=yaml_content_se)
 
